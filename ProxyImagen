@@ -1,0 +1,18 @@
+public class ImagennProxy implements Imagen {
+
+    private ImagenReal ImagenReal;
+    private String NombreImagen;
+
+    public ImagennProxy(String NombreImagen){
+        this.NombreImagen = NombreImagen;
+    }
+
+    @Override
+    public void VerImagen() {
+        if(ImagenReal == null){
+            ImagenReal = new ImagenReal(NombreImagen);
+        }
+        ImagenReal.VerImagen();
+    }
+
+}
